@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F0346911C069E6A00575EA0 /* AddReportController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0346901C069E6A00575EA0 /* AddReportController.swift */; };
 		2FCA02CF1C068D730042A783 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCA02CE1C068D730042A783 /* AppDelegate.swift */; };
-		2FCA02D11C068D730042A783 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCA02D01C068D730042A783 /* ViewController.swift */; };
+		2FCA02D11C068D730042A783 /* ReportsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCA02D01C068D730042A783 /* ReportsListController.swift */; };
 		2FCA02D41C068D730042A783 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FCA02D21C068D730042A783 /* Main.storyboard */; };
 		2FCA02D71C068D730042A783 /* geoLox.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2FCA02D51C068D730042A783 /* geoLox.xcdatamodeld */; };
 		2FCA02D91C068D730042A783 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FCA02D81C068D730042A783 /* Assets.xcassets */; };
@@ -16,9 +17,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F0346901C069E6A00575EA0 /* AddReportController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddReportController.swift; sourceTree = "<group>"; };
 		2FCA02CB1C068D730042A783 /* geoLox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = geoLox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FCA02CE1C068D730042A783 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2FCA02D01C068D730042A783 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2FCA02D01C068D730042A783 /* ReportsListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsListController.swift; sourceTree = "<group>"; };
 		2FCA02D31C068D730042A783 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2FCA02D61C068D730042A783 /* geoLox.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = geoLox.xcdatamodel; sourceTree = "<group>"; };
 		2FCA02D81C068D730042A783 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,8 +59,9 @@
 			isa = PBXGroup;
 			children = (
 				2FCA02CE1C068D730042A783 /* AppDelegate.swift */,
-				2FCA02D01C068D730042A783 /* ViewController.swift */,
+				2FCA02D01C068D730042A783 /* ReportsListController.swift */,
 				2FCA02D21C068D730042A783 /* Main.storyboard */,
+				2F0346901C069E6A00575EA0 /* AddReportController.swift */,
 				2FCA02D81C068D730042A783 /* Assets.xcassets */,
 				2FCA02DA1C068D730042A783 /* LaunchScreen.storyboard */,
 				2FCA02DD1C068D730042A783 /* Info.plist */,
@@ -138,7 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FCA02D11C068D730042A783 /* ViewController.swift in Sources */,
+				2FCA02D11C068D730042A783 /* ReportsListController.swift in Sources */,
+				2F0346911C069E6A00575EA0 /* AddReportController.swift in Sources */,
 				2FCA02CF1C068D730042A783 /* AppDelegate.swift in Sources */,
 				2FCA02D71C068D730042A783 /* geoLox.xcdatamodeld in Sources */,
 			);
@@ -288,6 +292,7 @@
 				2FCA02E21C068D730042A783 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
