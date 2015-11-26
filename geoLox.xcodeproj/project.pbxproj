@@ -1,0 +1,308 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2FCA02CF1C068D730042A783 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCA02CE1C068D730042A783 /* AppDelegate.swift */; };
+		2FCA02D11C068D730042A783 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCA02D01C068D730042A783 /* ViewController.swift */; };
+		2FCA02D41C068D730042A783 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FCA02D21C068D730042A783 /* Main.storyboard */; };
+		2FCA02D71C068D730042A783 /* geoLox.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2FCA02D51C068D730042A783 /* geoLox.xcdatamodeld */; };
+		2FCA02D91C068D730042A783 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FCA02D81C068D730042A783 /* Assets.xcassets */; };
+		2FCA02DC1C068D730042A783 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FCA02DA1C068D730042A783 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2FCA02CB1C068D730042A783 /* geoLox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = geoLox.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FCA02CE1C068D730042A783 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2FCA02D01C068D730042A783 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2FCA02D31C068D730042A783 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2FCA02D61C068D730042A783 /* geoLox.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = geoLox.xcdatamodel; sourceTree = "<group>"; };
+		2FCA02D81C068D730042A783 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2FCA02DB1C068D730042A783 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2FCA02DD1C068D730042A783 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2FCA02C81C068D730042A783 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2FCA02C21C068D730042A783 = {
+			isa = PBXGroup;
+			children = (
+				2FCA02CD1C068D730042A783 /* geoLox */,
+				2FCA02CC1C068D730042A783 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2FCA02CC1C068D730042A783 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2FCA02CB1C068D730042A783 /* geoLox.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2FCA02CD1C068D730042A783 /* geoLox */ = {
+			isa = PBXGroup;
+			children = (
+				2FCA02CE1C068D730042A783 /* AppDelegate.swift */,
+				2FCA02D01C068D730042A783 /* ViewController.swift */,
+				2FCA02D21C068D730042A783 /* Main.storyboard */,
+				2FCA02D81C068D730042A783 /* Assets.xcassets */,
+				2FCA02DA1C068D730042A783 /* LaunchScreen.storyboard */,
+				2FCA02DD1C068D730042A783 /* Info.plist */,
+				2FCA02D51C068D730042A783 /* geoLox.xcdatamodeld */,
+			);
+			path = geoLox;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2FCA02CA1C068D730042A783 /* geoLox */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2FCA02E01C068D730042A783 /* Build configuration list for PBXNativeTarget "geoLox" */;
+			buildPhases = (
+				2FCA02C71C068D730042A783 /* Sources */,
+				2FCA02C81C068D730042A783 /* Frameworks */,
+				2FCA02C91C068D730042A783 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = geoLox;
+			productName = geoLox;
+			productReference = 2FCA02CB1C068D730042A783 /* geoLox.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2FCA02C31C068D730042A783 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = snavarro;
+				TargetAttributes = {
+					2FCA02CA1C068D730042A783 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 2FCA02C61C068D730042A783 /* Build configuration list for PBXProject "geoLox" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2FCA02C21C068D730042A783;
+			productRefGroup = 2FCA02CC1C068D730042A783 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2FCA02CA1C068D730042A783 /* geoLox */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2FCA02C91C068D730042A783 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FCA02DC1C068D730042A783 /* LaunchScreen.storyboard in Resources */,
+				2FCA02D91C068D730042A783 /* Assets.xcassets in Resources */,
+				2FCA02D41C068D730042A783 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2FCA02C71C068D730042A783 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FCA02D11C068D730042A783 /* ViewController.swift in Sources */,
+				2FCA02CF1C068D730042A783 /* AppDelegate.swift in Sources */,
+				2FCA02D71C068D730042A783 /* geoLox.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2FCA02D21C068D730042A783 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2FCA02D31C068D730042A783 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2FCA02DA1C068D730042A783 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2FCA02DB1C068D730042A783 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2FCA02DE1C068D730042A783 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2FCA02DF1C068D730042A783 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2FCA02E11C068D730042A783 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = geoLox/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fonsoft.geoLox;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2FCA02E21C068D730042A783 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = geoLox/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fonsoft.geoLox;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2FCA02C61C068D730042A783 /* Build configuration list for PBXProject "geoLox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2FCA02DE1C068D730042A783 /* Debug */,
+				2FCA02DF1C068D730042A783 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2FCA02E01C068D730042A783 /* Build configuration list for PBXNativeTarget "geoLox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2FCA02E11C068D730042A783 /* Debug */,
+				2FCA02E21C068D730042A783 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2FCA02D51C068D730042A783 /* geoLox.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2FCA02D61C068D730042A783 /* geoLox.xcdatamodel */,
+			);
+			currentVersion = 2FCA02D61C068D730042A783 /* geoLox.xcdatamodel */;
+			path = geoLox.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2FCA02C31C068D730042A783 /* Project object */;
+}
