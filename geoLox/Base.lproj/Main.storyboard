@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="aiH-st-0BG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="aiH-st-0BG">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
-        <!--First View-->
+        <!--Mi ciudad-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="geoLox" customModuleProvider="target" sceneMemberID="viewController">
@@ -14,50 +14,61 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c85-zV-FbH">
-                                <rect key="frame" x="270" y="285" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="48" y="293" width="111" height="30"/>
+                                <state key="normal" title="Nuevo Reporte">
+                                    <color key="titleShadowColor" red="0.60392159219999997" green="0.80392163989999998" blue="0.98431378599999997" alpha="1" colorSpace="deviceRGB"/>
+                                </state>
                                 <connections>
-                                    <segue destination="er1-up-d6F" kind="showDetail" id="LbT-da-m9t"/>
+                                    <segue destination="Cz2-xx-YkB" kind="push" id="6ch-HZ-hTw"/>
                                 </connections>
                             </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="md3-9C-auS">
+                                <rect key="frame" x="189" y="286" width="51" height="31"/>
+                            </switch>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="First View" id="fgm-Js-gM7"/>
+                    <navigationItem key="navigationItem" title="Mi ciudad" id="fgm-Js-gM7"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1369" y="197"/>
+            <point key="canvasLocation" x="730" y="186"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="pOO-yF-dbh">
+        <!--Reporte-->
+        <scene sceneID="Cef-uX-9QI">
             <objects>
-                <viewController id="er1-up-d6F" sceneMemberID="viewController">
+                <viewController id="Cz2-xx-YkB" customClass="AddReportController" customModule="geoLox" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="SHK-cr-9zS"/>
-                        <viewControllerLayoutGuide type="bottom" id="Gye-46-RsS"/>
+                        <viewControllerLayoutGuide type="top" id="4dN-MS-22q"/>
+                        <viewControllerLayoutGuide type="bottom" id="DLL-Ft-txR"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="AXd-IF-R2K">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <view key="view" contentMode="scaleToFill" id="y0g-ud-tGf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="sebasasasasasfsdsdfdsf" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="erb-sV-kGR">
-                                <rect key="frame" x="147" y="151" width="412" height="211"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="dfddfdf" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RpT-0M-X8D">
+                                <rect key="frame" x="20" y="92" width="290" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jvu-xH-25E">
+                                <rect key="frame" x="116" y="430" width="74" height="30"/>
+                                <state key="normal" title="Enviar"/>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Reporte" id="bz3-RC-DjN">
+                        <barButtonItem key="backBarButtonItem" title="Mi ciudad" id="OiI-SU-Lkc"/>
+                    </navigationItem>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7Q8-FV-XGN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8iM-YO-g4p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2039" y="197"/>
+            <point key="canvasLocation" x="1097" y="186"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TSl-ai-qJV">
@@ -75,7 +86,8 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ttO-W7-tX3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="742" y="197"/>
+            <point key="canvasLocation" x="395.73333333333335" y="186.49333333333334"/>
         </scene>
     </scenes>
+    <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
 </document>
