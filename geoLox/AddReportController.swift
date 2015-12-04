@@ -13,19 +13,20 @@ import QuartzCore
 
 class AddReportController: UIViewController, geoMapDelegate {
     
-    @IBOutlet weak var btnReport: UIButton!
-    
+    @IBOutlet weak var btnSubmitReport: UIButton!
+  
     @IBOutlet weak var geoV: geoMap!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
+        // Do any additional setup after loading the view, typically from a nib.
         geoV.delegate = self;
-    
-        btnReport.layer.cornerRadius = 10; // this value vary as per your desire
-        btnReport.clipsToBounds = true;
-    
+        
+        //this value vary as per your desire
+        btnSubmitReport.layer.cornerRadius = 10;
+        
+        btnSubmitReport.clipsToBounds = true;
     }
     
     override func didReceiveMemoryWarning() {
@@ -40,15 +41,15 @@ class AddReportController: UIViewController, geoMapDelegate {
     }
     
     func regionDidChangeAnimated(controller: geoMap){
-        
-        //var a : String = "dsd"
-        btnReport.hidden = false;
-        
+        btnSubmitReport.hidden = false;
     }
     
     func mapTouchMove(controller: geoMap){
-        btnReport.hidden = true;
-        //var a : String = "dsd"
+        btnSubmitReport.hidden = true;
+    }
+    
+    func mapTouchMoveEnded(controller: geoMap){
+        btnSubmitReport.hidden = false;
     }
 }
 

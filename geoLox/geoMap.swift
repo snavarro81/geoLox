@@ -8,15 +8,27 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
 protocol geoMapDelegate{
-    func regionDidChangeAnimated(controller: geoMap)
-    func mapTouchMove(controller: geoMap)
+        func regionDidChangeAnimated(controller: geoMap)
+        func mapTouchMove(controller: geoMap)
+        func mapTouchMoveEnded(controller: geoMap)
 }
 
-class geoMap: UIView, MKMapViewDelegate  {
+
+class geoMap: UIView, MKMapViewDelegate, CLLocationManagerDelegate  {
     
+    //Outlets
+    //Simplicity rules in swift. If you have a property defined 
+    //that you want to make accessible to your storyboards,
+    //just add the @IBOutlet attribute before your property.
+    //Similarly with @IBAction to connect storyboard actions back to code.
     @IBOutlet weak var map: MKMapView!
+    
+    //
+      let locationManager = CLLocationManager()
+    
     // Our custom view from the XIB file
     var view: UIView!
     
@@ -31,20 +43,20 @@ class geoMap: UIView, MKMapViewDelegate  {
     
     var handler:WildcardGestureRecognizerHandler?
     
-    var mapHasUserInteraction = false
-    var userInteractionActive = false
-    var userInteractionTimer:NSTimer?
+    //var mapHasUserInteraction = false
+    //var userInteractionActive = false
+    //var userInteractionTimer:NSTimer?
     
-    //Outlets
-    override init(frame: CGRect) {
+    
+    //override init(frame: CGRect) {
         // 1. setup any properties here
         
         // 2. call super.init(frame:)
-        super.init(frame: frame)
+    //    super.init(frame: frame)
         
         // 3. Setup view from .xib file
-        xibSetup()
-    }
+    //    xibSetup()
+    //}
     
     required init?(coder aDecoder: NSCoder) {
         // 1. setup any properties here
@@ -56,11 +68,54 @@ class geoMap: UIView, MKMapViewDelegate  {
         xibSetup()
     }
     
+    func getLocation() {
+        
+       let authStatus = CLLocationManager.authorizationStatus()
+        
+        if authStatus == .NotDetermined {
+            locationManager.requestWhenInUseAuthorization()
+            return
+        }
+        
+        if authStatus == .Denied || authStatus == .Restricted {
+            //showLocationServicesDeniedAlert()
+            return
+        }
+        
+        //if logoVisible {
+            //hideLogoView()
+        //}
+        
+        if updatingLocation {
+            //stopLocationManager()
+        } else {
+            //location = nil
+            //lastLocationError = nil
+            //placemark = nil
+            //lastGeocodingError = nil
+            //startLocationManager()
+        }
+        
+        //updateLabels()
+        //configureGetButton()
+    }
     
-    func touchesBegan1(touches: NSSet, withEvent event: UIEvent) {
+    
+    
+    
+    //touches began handler
+    func touchesBegan_handler(touches: NSSet, withEvent event: UIEvent) {
         // do your stuff
         //self.state = .Began
         self.delegate?.mapTouchMove(self)
+    }
+    
+    
+    //touches ended handler
+    func touchesEnded_handler(touches: NSSet, withEvent event: UIEvent) {
+        // do your stuff
+        //self.state = .Began
+        self.delegate?.mapTouchMoveEnded(self)
     }
     
     func xibSetup() {
@@ -71,12 +126,15 @@ class geoMap: UIView, MKMapViewDelegate  {
         
         centerMapOnLocation(initialLoc);
         
-        let gr = WildcardGestureRecognizer(target: self, action: "userInteractedWithMap")
+        let gestureObj = WildcardGestureRecognizer(target: self, action: "userInteractedWithMap")
         
-        gr.handler = touchesBegan1
-        map.addGestureRecognizer(gr)
-    
+        gestureObj.handlerTouchesBegan = touchesBegan_handler
+        gestureObj.handlerTouchesEnded = touchesEnded_handler
+        map.addGestureRecognizer(gestureObj)
+        
         map.delegate = self;
+        
+        
         
         //let target: MKPointAnnotation = MKPointAnnotation()
         //t arget.coordinate = listMapView.centerCoordinate
@@ -84,10 +142,6 @@ class geoMap: UIView, MKMapViewDelegate  {
         //target.subtitle = "\(target.coordinate.latitude), \(target.coordinate.longitude)"
         //listMapView.addAnnotation(target)
         //self.centerAnnotation = target
-        
-        
-        
-        
         
         // use bounds not frame or it'll be offset
         view.frame = bounds
@@ -97,27 +151,33 @@ class geoMap: UIView, MKMapViewDelegate  {
         
         // Adding custom subview on top of our view (over any custom drawing > see note below)
         addSubview(view)
+        
+        
+        
+        getLocation()
     }
-
+    
+    //
     func userInteractedWithMap() {
-        self.userInteractionActive = true
-        self.mapHasUserInteraction = true
-        if !(self.userInteractionTimer==nil) {
-            self.userInteractionTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "userInteractionUpdate", userInfo: nil, repeats: true)
-        }
+        //self.userInteractionActive = true
+        //self.mapHasUserInteraction = true
+        //if !(self.userInteractionTimer==nil) {
+        //    self.userInteractionTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "userInteractionUpdate", userInfo: nil, repeats: true)
+        //}
     }
     
+    //
     func userInteractionUpdate() {
-        if self.userInteractionActive {
-            self.userInteractionActive = false
-        } else {
-            self.userInteractionTimer?.invalidate()
-            self.userInteractionTimer = nil
-            self.mapHasUserInteraction = false
-        }
+        //if self.userInteractionActive {
+        //    self.userInteractionActive = false
+        //} else {
+        //    self.userInteractionTimer?.invalidate()
+        //    self.userInteractionTimer = nil
+        //    self.mapHasUserInteraction = false
+        //}
     }
     
-    //load view from Nib (xib file)
+    //Load view from Nib (xib file)
     func loadViewFromNib() -> UIView {
         let bundle = NSBundle(forClass: self.dynamicType)
         let nib = UINib(nibName: "geoMap", bundle: bundle)
@@ -141,7 +201,6 @@ class geoMap: UIView, MKMapViewDelegate  {
     
     
     
-    /*
     // Only override drawRect: if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
     override func drawRect(rect: CGRect) {
@@ -150,13 +209,12 @@ class geoMap: UIView, MKMapViewDelegate  {
     
     
     }
-    */
+    
     
     //
-    //MKMapViewDelegate
+    //mapView MKMapViewDelegate
     //
     func mapView(mapView: MKMapView, regionDidChangeAnimated animated: Bool){
-        
         
         //centerMapOnLocation(initialLoc);
         
@@ -170,7 +228,6 @@ class geoMap: UIView, MKMapViewDelegate  {
         //When an annotation’s coordinate point is in the visible region, the map view asks its delegate to provide a corresponding annotation view. Annotation views may be recycled later and put into a reuse queue that is maintained by the map view.
         
         self.delegate?.regionDidChangeAnimated(self)
-        
     }
 }
 

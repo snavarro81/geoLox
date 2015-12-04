@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="307" height="412"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="313" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="iLN-6w-qhk">
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="313" mapType="hybrid" translatesAutoresizingMaskIntoConstraints="NO" id="iLN-6w-qhk">
                     <rect key="frame" x="2" y="2" width="307" height="313"/>
                     <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                 </mapView>

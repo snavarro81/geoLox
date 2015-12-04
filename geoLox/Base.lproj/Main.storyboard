@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view multipleTouchEnabled="YES" contentMode="scaleAspectFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fG3-Rw-2aR" customClass="geoMap" customModule="geoLox" customModuleProvider="target">
+                            <view multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fG3-Rw-2aR" customClass="geoMap" customModule="geoLox" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration">
@@ -27,10 +27,6 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="fG3-Rw-2aR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E0s-0u-w9v"/>
-                            <constraint firstItem="fG3-Rw-2aR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WOX-Je-KTK"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Mi ciudad" id="fgm-Js-gM7">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="3c4-uF-wsF">
@@ -77,13 +73,9 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGK-jE-Pdi">
-                                <rect key="frame" x="115" y="266" width="90" height="37"/>
-                                <color key="backgroundColor" red="0.78555710300000003" green="1" blue="0.38603584489999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <inset key="contentEdgeInsets" minX="3" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" red="0.78555710300000003" green="1" blue="0.38603584489999998" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1y9-5M-Typ">
+                                <rect key="frame" x="77" y="266" width="166" height="37"/>
+                                <state key="normal" title="Enviar"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -92,7 +84,7 @@
                         <barButtonItem key="backBarButtonItem" title="Mi ciudad" id="OiI-SU-Lkc"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="btnReport" destination="aGK-jE-Pdi" id="DYs-Lb-qtd"/>
+                        <outlet property="btnSubmitReport" destination="1y9-5M-Typ" id="Rar-eR-lAL"/>
                         <outlet property="geoV" destination="gDK-9y-Jmi" id="EXG-hy-Vex"/>
                     </connections>
                 </viewController>

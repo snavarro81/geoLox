@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2F0346911C069E6A00575EA0 /* AddReportController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0346901C069E6A00575EA0 /* AddReportController.swift */; };
 		2F0A5AD81C0D487F0006D785 /* WildcardGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A5AD71C0D487F0006D785 /* WildcardGestureRecognizer.swift */; };
+		2F9DD8EE1C0FDB720077D45A /* Threading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9DD8ED1C0FDB720077D45A /* Threading.swift */; };
 		2F9F69301C08DB8800E9568A /* LocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9F692F1C08DB8800E9568A /* LocationController.swift */; };
 		2FCA02CF1C068D730042A783 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCA02CE1C068D730042A783 /* AppDelegate.swift */; };
 		2FCA02D11C068D730042A783 /* ReportsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCA02D01C068D730042A783 /* ReportsListController.swift */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		2F0346901C069E6A00575EA0 /* AddReportController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddReportController.swift; sourceTree = "<group>"; };
 		2F0A5AD71C0D487F0006D785 /* WildcardGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WildcardGestureRecognizer.swift; sourceTree = "<group>"; };
+		2F9DD8ED1C0FDB720077D45A /* Threading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Threading.swift; sourceTree = "<group>"; };
 		2F9F692F1C08DB8800E9568A /* LocationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationController.swift; sourceTree = "<group>"; };
 		2FCA02CB1C068D730042A783 /* geoLox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = geoLox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FCA02CE1C068D730042A783 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,20 +68,53 @@
 		2FCA02CD1C068D730042A783 /* geoLox */ = {
 			isa = PBXGroup;
 			children = (
+				2FEA160D1C0FC76800F9D208 /* views */,
+				2FEA160C1C0FC73A00F9D208 /* aux */,
+				2FEA160B1C0FC70D00F9D208 /* controllers */,
+				2FEA160A1C0FC68E00F9D208 /* geoMapXib */,
 				2FCA02CE1C068D730042A783 /* AppDelegate.swift */,
-				2FCA02D01C068D730042A783 /* ReportsListController.swift */,
-				2FCA02D21C068D730042A783 /* Main.storyboard */,
-				2F0346901C069E6A00575EA0 /* AddReportController.swift */,
 				2FCA02D81C068D730042A783 /* Assets.xcassets */,
-				2FCA02DA1C068D730042A783 /* LaunchScreen.storyboard */,
 				2FCA02DD1C068D730042A783 /* Info.plist */,
 				2FCA02D51C068D730042A783 /* geoLox.xcdatamodeld */,
-				2F9F692F1C08DB8800E9568A /* LocationController.swift */,
-				2FCB26D31C094D9E00016DAA /* geoMap.swift */,
-				2FCB26D51C094DB300016DAA /* geoMap.xib */,
-				2F0A5AD71C0D487F0006D785 /* WildcardGestureRecognizer.swift */,
 			);
 			path = geoLox;
+			sourceTree = "<group>";
+		};
+		2FEA160A1C0FC68E00F9D208 /* geoMapXib */ = {
+			isa = PBXGroup;
+			children = (
+				2FCB26D31C094D9E00016DAA /* geoMap.swift */,
+				2FCB26D51C094DB300016DAA /* geoMap.xib */,
+			);
+			name = geoMapXib;
+			sourceTree = "<group>";
+		};
+		2FEA160B1C0FC70D00F9D208 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2F0346901C069E6A00575EA0 /* AddReportController.swift */,
+				2FCA02D01C068D730042A783 /* ReportsListController.swift */,
+			);
+			name = controllers;
+			sourceTree = "<group>";
+		};
+		2FEA160C1C0FC73A00F9D208 /* aux */ = {
+			isa = PBXGroup;
+			children = (
+				2F9F692F1C08DB8800E9568A /* LocationController.swift */,
+				2F0A5AD71C0D487F0006D785 /* WildcardGestureRecognizer.swift */,
+				2F9DD8ED1C0FDB720077D45A /* Threading.swift */,
+			);
+			name = aux;
+			sourceTree = "<group>";
+		};
+		2FEA160D1C0FC76800F9D208 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				2FCA02DA1C068D730042A783 /* LaunchScreen.storyboard */,
+				2FCA02D21C068D730042A783 /* Main.storyboard */,
+			);
+			name = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +189,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F9DD8EE1C0FDB720077D45A /* Threading.swift in Sources */,
 				2F0A5AD81C0D487F0006D785 /* WildcardGestureRecognizer.swift in Sources */,
 				2FCA02D11C068D730042A783 /* ReportsListController.swift in Sources */,
 				2F0346911C069E6A00575EA0 /* AddReportController.swift in Sources */,

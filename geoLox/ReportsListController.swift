@@ -12,11 +12,9 @@
 import UIKit
 import MapKit
 
-
 //struct Constants{
 //    static let embedSegue = "embedSegue"
 //}
-
 
 //class ReportsListController: UIViewController , MKMapViewDelegate{
 class ReportsListController: UIViewController , geoMapDelegate {
@@ -38,7 +36,7 @@ class ReportsListController: UIViewController , geoMapDelegate {
     }
     
     //func regionDidChangeAnimated(controller: geoMap){
-        //
+    //
     //}
     
     
@@ -67,17 +65,17 @@ class ReportsListController: UIViewController , geoMapDelegate {
     
     //override func didReceiveMemoryWarning() {
     //    super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    // Dispose of any resources that can be recreated.
     //}
     
     
     //func centerMapOnLocation(location : CLLocation){
-        //    let regionRadius : CLLocationDistance = 1000
-        
-        //  let coordinateRegion  =  MKCoordinateRegionMakeWithDistance(location.coordinate,
-        //     regionRadius * 2.0, regionRadius * 2.0  )
-        
-        //        listMapView.setRegion(coordinateRegion, animated: true)
+    //    let regionRadius : CLLocationDistance = 1000
+    
+    //  let coordinateRegion  =  MKCoordinateRegionMakeWithDistance(location.coordinate,
+    //     regionRadius * 2.0, regionRadius * 2.0  )
+    
+    //        listMapView.setRegion(coordinateRegion, animated: true)
     //}
     
     //func screenSize() -> CGSize {
@@ -86,7 +84,7 @@ class ReportsListController: UIViewController , geoMapDelegate {
     //        return CGSizeMake(screenSize.height, screenSize.width)
     //    }
     //    return screenSize
-   //}
+    //}
     
     //func mapView(mapView: MKMapView, regionDidChangeAnimated animated: Bool){
     //centerMapOnLocation(initialLoc);
@@ -101,13 +99,17 @@ class ReportsListController: UIViewController , geoMapDelegate {
     //}
     
     func regionDidChangeAnimated(controller: geoMap){
-    
+        
         //var a : String = "dsd"
     }
     
     
     func mapTouchMove(controller: geoMap){
         
+        //var a : String = "dsd"
+    }
+    
+    func mapTouchMoveEnded(controller: geoMap) {
         //var a : String = "dsd"
     }
 }
