@@ -54,12 +54,6 @@ class ReportsListController: UIViewController , geoMapDelegate {
         
         //listMapView.delegate = self;
         
-        //let target: MKPointAnnotation = MKPointAnnotation()
-        //target.coordinate = listMapView.centerCoordinate
-        //target.title = "Target"
-        //target.subtitle = "\(target.coordinate.latitude), \(target.coordinate.longitude)"
-        //listMapView.addAnnotation(target)
-        //self.centerAnnotation = target
         
     }
     

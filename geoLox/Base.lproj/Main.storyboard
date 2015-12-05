@@ -77,8 +77,19 @@
                                 <rect key="frame" x="77" y="266" width="166" height="37"/>
                                 <state key="normal" title="Enviar"/>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="pin_small.png" translatesAutoresizingMaskIntoConstraints="NO" id="xW3-7W-OGT">
+                                <rect key="frame" x="131" y="265" width="58" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="58" id="OvD-P9-5Rs"/>
+                                    <constraint firstAttribute="height" constant="37" id="tcY-gH-bcl"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xW3-7W-OGT" firstAttribute="centerX" secondItem="y0g-ud-tGf" secondAttribute="centerX" constant="3" id="PiS-PV-aNH"/>
+                            <constraint firstItem="xW3-7W-OGT" firstAttribute="centerY" secondItem="y0g-ud-tGf" secondAttribute="centerY" constant="19" id="b1o-W7-htx"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Reporte" id="bz3-RC-DjN">
                         <barButtonItem key="backBarButtonItem" title="Mi ciudad" id="OiI-SU-Lkc"/>
@@ -111,5 +122,8 @@
             <point key="canvasLocation" x="395.73333333333335" y="186.49333333333334"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pin_small.png" width="1106" height="700"/>
+    </resources>
     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>

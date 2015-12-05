@@ -26,8 +26,11 @@ class geoMap: UIView, MKMapViewDelegate, CLLocationManagerDelegate  {
     //Similarly with @IBAction to connect storyboard actions back to code.
     @IBOutlet weak var map: MKMapView!
     
-    //
-      let locationManager = CLLocationManager()
+    
+    var timer: NSTimer?
+    let locationManager = CLLocationManager()
+    var location: CLLocation?
+    var updatingLocation = false
     
     // Our custom view from the XIB file
     var view: UIView!
@@ -87,21 +90,83 @@ class geoMap: UIView, MKMapViewDelegate, CLLocationManagerDelegate  {
         //}
         
         if updatingLocation {
-            //stopLocationManager()
+            stopLocationManager()
         } else {
             //location = nil
             //lastLocationError = nil
             //placemark = nil
             //lastGeocodingError = nil
-            //startLocationManager()
+            startLocationManager()
         }
         
         //updateLabels()
         //configureGetButton()
     }
     
+    //start location manager
+    func startLocationManager() {
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.requestAlwaysAuthorization()
+            locationManager.startUpdatingLocation()
+            updatingLocation = true
+            
+            //updateLocationTimeOut()
+            
+            timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateLocationTimeOut"), userInfo: nil, repeats: false)
+        }
+    }
     
+    //Update location time out
+    func updateLocationTimeOut() {
+        
+        print("*** get update location time out")
+        
+        if location == nil {
+            stopLocationManager()
+            
+            lastLocationError = NSError(domain: "MyLocationsErrorDomain", code: 1, userInfo: nil)
+        }
+        
+        updateMapCenterLocation()
     
+        stopLocationManager()
+        
+    }
+    
+    func updateMapCenterLocation() {
+        if let location = location {
+        
+            print("Update Map center location")
+        
+            initialLoc = CLLocation(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+            
+            centerMapOnLocation(initialLoc);
+            
+            //let lat =  location.coordinate.latitude
+            //let lon =  location.coordinate.longitude
+        
+            
+            //self.centerAnnotation = target
+        
+        } else {
+            
+        }
+    }
+    
+    //stop location manager
+    func stopLocationManager() {
+        if updatingLocation {
+            locationManager.stopUpdatingLocation()
+            locationManager.delegate = nil
+            updatingLocation = false
+            
+            if let timer = timer {
+                timer.invalidate()
+            }
+        }
+    }
     
     //touches began handler
     func touchesBegan_handler(touches: NSSet, withEvent event: UIEvent) {
@@ -109,7 +174,6 @@ class geoMap: UIView, MKMapViewDelegate, CLLocationManagerDelegate  {
         //self.state = .Began
         self.delegate?.mapTouchMove(self)
     }
-    
     
     //touches ended handler
     func touchesEnded_handler(touches: NSSet, withEvent event: UIEvent) {
@@ -122,9 +186,12 @@ class geoMap: UIView, MKMapViewDelegate, CLLocationManagerDelegate  {
         
         view = loadViewFromNib()
         
-        initialLoc = CLLocation(latitude: 21.282778, longitude: -157.829444)
+        //get current location
+        getLocation()
         
-        centerMapOnLocation(initialLoc);
+        //initialLoc = CLLocation(latitude: 21.282778, longitude: -157.829444)
+        
+        //centerMapOnLocation(initialLoc);
         
         let gestureObj = WildcardGestureRecognizer(target: self, action: "userInteractedWithMap")
         
@@ -133,15 +200,6 @@ class geoMap: UIView, MKMapViewDelegate, CLLocationManagerDelegate  {
         map.addGestureRecognizer(gestureObj)
         
         map.delegate = self;
-        
-        
-        
-        //let target: MKPointAnnotation = MKPointAnnotation()
-        //t arget.coordinate = listMapView.centerCoordinate
-        //target.title = "Target"
-        //target.subtitle = "\(target.coordinate.latitude), \(target.coordinate.longitude)"
-        //listMapView.addAnnotation(target)
-        //self.centerAnnotation = target
         
         // use bounds not frame or it'll be offset
         view.frame = bounds
@@ -153,8 +211,6 @@ class geoMap: UIView, MKMapViewDelegate, CLLocationManagerDelegate  {
         addSubview(view)
         
         
-        
-        getLocation()
     }
     
     //
@@ -191,12 +247,24 @@ class geoMap: UIView, MKMapViewDelegate, CLLocationManagerDelegate  {
     
     //Center map on specified location
     func centerMapOnLocation(location : CLLocation){
-        let regionRadius : CLLocationDistance = 1000
+        //let regionRadius : CLLocationDistance = 1000
         
-        let coordinateRegion  =  MKCoordinateRegionMakeWithDistance(location.coordinate,
-            regionRadius * 2.0, regionRadius * 2.0  )
+        //let coordinateRegion  =  MKCoordinateRegionMakeWithDistance(location.coordinate,
+        //    regionRadius * 2.0, regionRadius * 2.0  )
         
-        map.setRegion(coordinateRegion, animated: true)
+        //map.setRegion(coordinateRegion, animated: true)
+        
+        
+        let span = MKCoordinateSpanMake(0.0025, 0.0025)
+        let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: location.coordinate.latitude,
+            longitude: location.coordinate.longitude), span: span)
+        
+        map.setRegion(region, animated: true)
+        
+        
+       
+        
+        
     }
     
     
@@ -227,7 +295,104 @@ class geoMap: UIView, MKMapViewDelegate, CLLocationManagerDelegate  {
         //Annotation views are loosely coupled to a corresponding annotation object, which is an object that corresponds to the MKAnnotation protocol.
         //When an annotation’s coordinate point is in the visible region, the map view asks its delegate to provide a corresponding annotation view. Annotation views may be recycled later and put into a reuse queue that is maintained by the map view.
         
+       
+        let target: MKPointAnnotation = MKPointAnnotation()
+        target.coordinate = map.centerCoordinate
+        target.title = "Target"
+        target.subtitle = "\(target.coordinate.latitude), \(target.coordinate.longitude)"
+        
+        map.addAnnotation(target)
+        
+        
         self.delegate?.regionDidChangeAnimated(self)
+    }
+    
+    
+    
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        print("sdsds");
+        
+        //print("didUpdateLocations \(newLocation)")
+        
+        let newLocation = locations.last!
+        
+        
+        if newLocation.timestamp.timeIntervalSinceNow < -5 {
+            return
+        }
+        
+        if newLocation.horizontalAccuracy < 0 {
+            return
+        }
+        
+        var distance = CLLocationDistance(DBL_MAX)
+        if let location = location {
+            distance = newLocation.distanceFromLocation(location)
+        }
+        
+        
+        if location == nil || location!.horizontalAccuracy > newLocation.horizontalAccuracy {
+            
+            lastLocationError = nil
+            location = newLocation
+            
+            /*
+            updateLabels()
+            
+            if newLocation.horizontalAccuracy <= locationManager.desiredAccuracy {
+                print("*** We're done!")
+                stopLocationManager()
+                configureGetButton()
+                
+                if distance > 0 {
+                  performingReverseGeocoding = false
+                }
+            }
+            
+            if !performingReverseGeocoding {
+            print("*** Going to geocode")
+            
+            performingReverseGeocoding = true
+            
+            geocoder.reverseGeocodeLocation(newLocation, completionHandler: {
+            placemarks, error in
+            
+            //print("*** Found placemarks: \(placemarks), error: \(error)")
+            
+            self.lastGeocodingError = error
+            if error == nil, let p = placemarks where !p.isEmpty {
+            if self.placemark == nil {
+            print("FIRST TIME!")
+            self.playSoundEffect()
+            }
+            self.placemark = p.last!
+            } else {
+            self.placemark = nil
+            }
+            
+            self.performingReverseGeocoding = false
+            self.updateLabels()
+            })
+            }
+            */
+            
+        }
+        else if distance < 1.0 {
+            
+        //    print("dsdsd")
+            
+            /*
+            let timeInterval = newLocation.timestamp.timeIntervalSinceDate(location!.timestamp)
+            if timeInterval > 10 {
+                print("*** Force done!")
+                stopLocationManager()
+                updateLabels()
+                configureGetButton()
+            }
+            */
+        }
     }
 }
 
