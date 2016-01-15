@@ -11,17 +11,23 @@
 import UIKit
 import QuartzCore
 
-class AddReportController: UIViewController, geoMapDelegate {
+class AddReportController: UIViewController, geoMapDelegate, UITextViewDelegate {
     
     @IBOutlet weak var btnSubmitReport: UIButton!
   
     @IBOutlet weak var geoV: geoMap!
+    
+    @IBOutlet weak var txt: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view, typically from a nib.
         geoV.delegate = self;
+        txt.delegate = self;
+        
+        
+        //txt.backgroundColor = UIColor.clearColor();
         
         //this value vary as per your desire
         btnSubmitReport.layer.cornerRadius = 10;
@@ -33,8 +39,6 @@ class AddReportController: UIViewController, geoMapDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
@@ -50,6 +54,14 @@ class AddReportController: UIViewController, geoMapDelegate {
     
     func mapTouchMoveEnded(controller: geoMap){
         btnSubmitReport.hidden = false;
+    }
+    
+    func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
+        if(text == "\n") {
+            textView.resignFirstResponder()
+            return false
+        }
+        return true
     }
 }
 

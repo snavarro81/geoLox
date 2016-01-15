@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="geoMap" customModule="geoLox" customModuleProvider="target">
@@ -19,6 +19,13 @@
                     <rect key="frame" x="2" y="2" width="307" height="313"/>
                     <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                 </mapView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4b-kd-min">
+                    <rect key="frame" x="239" y="29" width="62" height="30"/>
+                    <state key="normal" title="User Pos"/>
+                    <connections>
+                        <action selector="showUser" destination="-1" eventType="touchUpInside" id="fR2-lK-rUf"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.33497954742895419" green="1" blue="0.9796571475575736" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>

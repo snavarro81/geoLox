@@ -292,7 +292,7 @@ class geoMap: UIView, MKMapViewDelegate, CLLocationManagerDelegate  {
         //mapView.region.center
         
         //The MKAnnotationView class is responsible for presenting annotations visually in a map view.
-        //Annotation views are loosely coupled to a corresponding annotation object, which is an object that corresponds to the MKAnnotation protocol.
+        //Annotation views are loosely coubpled to a corresponding annotation object, which is an object that corresponds to the MKAnnotation protocol.
         //When an annotation’s coordinate point is in the visible region, the map view asks its delegate to provide a corresponding annotation view. Annotation views may be recycled later and put into a reuse queue that is maintained by the map view.
         
        
@@ -307,17 +307,24 @@ class geoMap: UIView, MKMapViewDelegate, CLLocationManagerDelegate  {
         self.delegate?.regionDidChangeAnimated(self)
     }
     
+    //Center map on user position
+    @IBAction func showUser() {
+        
+        centerMapOnLocation(initialLoc);
+        
+        //let region = MKCoordinateRegionMakeWithDistance(map.userLocation.coordinate, 1000, 1000)
+        //map.setRegion(map.regionThatFits(region), animated: true)
+    }
     
     
     
+    //
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         print("sdsds");
         
         //print("didUpdateLocations \(newLocation)")
-        
         let newLocation = locations.last!
-        
         
         if newLocation.timestamp.timeIntervalSinceNow < -5 {
             return
