@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		2F0346911C069E6A00575EA0 /* AddReportController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0346901C069E6A00575EA0 /* AddReportController.swift */; };
 		2F0A5AD81C0D487F0006D785 /* WildcardGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A5AD71C0D487F0006D785 /* WildcardGestureRecognizer.swift */; };
+		2F1DE52A1C49C98400D350F7 /* ModalCategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1DE5291C49C98400D350F7 /* ModalCategoryController.swift */; };
 		2F24C5DB1C15F60C009EC287 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F24C5DA1C15F60C009EC287 /* SWRevealViewController.m */; };
 		2F6B860F1C13911800AF006C /* pin_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F6B860E1C13911800AF006C /* pin_small.png */; };
 		2F9DD8EE1C0FDB720077D45A /* Threading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9DD8ED1C0FDB720077D45A /* Threading.swift */; };
 		2F9F69301C08DB8800E9568A /* LocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9F692F1C08DB8800E9568A /* LocationController.swift */; };
 		2FA3255F1C2633F5004FDFE4 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA3255E1C2633F5004FDFE4 /* MenuController.swift */; };
 		2FA325611C2639D3004FDFE4 /* NewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA325601C2639D3004FDFE4 /* NewsController.swift */; };
+		2FB014FF1C56F48900BB7CA9 /* ReportData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB014FE1C56F48900BB7CA9 /* ReportData.swift */; };
 		2FCA02CF1C068D730042A783 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCA02CE1C068D730042A783 /* AppDelegate.swift */; };
 		2FCA02D11C068D730042A783 /* ReportsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCA02D01C068D730042A783 /* ReportsListController.swift */; };
 		2FCA02D41C068D730042A783 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FCA02D21C068D730042A783 /* Main.storyboard */; };
@@ -30,6 +32,7 @@
 /* Begin PBXFileReference section */
 		2F0346901C069E6A00575EA0 /* AddReportController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddReportController.swift; sourceTree = "<group>"; };
 		2F0A5AD71C0D487F0006D785 /* WildcardGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WildcardGestureRecognizer.swift; sourceTree = "<group>"; };
+		2F1DE5291C49C98400D350F7 /* ModalCategoryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalCategoryController.swift; sourceTree = "<group>"; };
 		2F24C5D91C15F60C009EC287 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = ../../../Downloads/SlideoutMenu/SlideoutMenu/SWRevealViewController.h; sourceTree = "<group>"; };
 		2F24C5DA1C15F60C009EC287 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = ../../../Downloads/SlideoutMenu/SlideoutMenu/SWRevealViewController.m; sourceTree = "<group>"; };
 		2F24C5DC1C15F823009EC287 /* geoLox-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "geoLox-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -38,6 +41,7 @@
 		2F9F692F1C08DB8800E9568A /* LocationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationController.swift; sourceTree = "<group>"; };
 		2FA3255E1C2633F5004FDFE4 /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		2FA325601C2639D3004FDFE4 /* NewsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsController.swift; sourceTree = "<group>"; };
+		2FB014FE1C56F48900BB7CA9 /* ReportData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportData.swift; sourceTree = "<group>"; };
 		2FCA02CB1C068D730042A783 /* geoLox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = geoLox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FCA02CE1C068D730042A783 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2FCA02D01C068D730042A783 /* ReportsListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsListController.swift; sourceTree = "<group>"; };
@@ -71,6 +75,14 @@
 			name = icons;
 			sourceTree = "<group>";
 		};
+		2FB014FD1C56F43100BB7CA9 /* singleton */ = {
+			isa = PBXGroup;
+			children = (
+				2FB014FE1C56F48900BB7CA9 /* ReportData.swift */,
+			);
+			name = singleton;
+			sourceTree = "<group>";
+		};
 		2FCA02C21C068D730042A783 = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +102,7 @@
 		2FCA02CD1C068D730042A783 /* geoLox */ = {
 			isa = PBXGroup;
 			children = (
+				2FB014FD1C56F43100BB7CA9 /* singleton */,
 				2F24C5DC1C15F823009EC287 /* geoLox-Bridging-Header.h */,
 				2FE5B2381C1493F1002541A7 /* coredata */,
 				2F6B860D1C13907600AF006C /* icons */,
@@ -130,6 +143,7 @@
 				2FCA02D01C068D730042A783 /* ReportsListController.swift */,
 				2FA3255E1C2633F5004FDFE4 /* MenuController.swift */,
 				2FA325601C2639D3004FDFE4 /* NewsController.swift */,
+				2F1DE5291C49C98400D350F7 /* ModalCategoryController.swift */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -236,9 +250,11 @@
 				2FCA02D11C068D730042A783 /* ReportsListController.swift in Sources */,
 				2FA3255F1C2633F5004FDFE4 /* MenuController.swift in Sources */,
 				2F0346911C069E6A00575EA0 /* AddReportController.swift in Sources */,
+				2F1DE52A1C49C98400D350F7 /* ModalCategoryController.swift in Sources */,
 				2FCB26D41C094D9E00016DAA /* geoMap.swift in Sources */,
 				2FCA02CF1C068D730042A783 /* AppDelegate.swift in Sources */,
 				2F9F69301C08DB8800E9568A /* LocationController.swift in Sources */,
+				2FB014FF1C56F48900BB7CA9 /* ReportData.swift in Sources */,
 				2F24C5DB1C15F60C009EC287 /* SWRevealViewController.m in Sources */,
 				2FE5B24B1C14A58E002541A7 /* Report+CoreDataProperties.swift in Sources */,
 				2FCA02D71C068D730042A783 /* geoLox.xcdatamodeld in Sources */,

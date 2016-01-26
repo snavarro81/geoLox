@@ -40,6 +40,9 @@ class ReportsListController: UIViewController , geoMapDelegate {
     //}
     
     
+    //deinit {
+    //    NSNotificationCenter.defaultCenter().removeObserver(self);
+    //}
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +59,7 @@ class ReportsListController: UIViewController , geoMapDelegate {
         
         
     }
+    
     
     //override func didReceiveMemoryWarning() {
     //    super.didReceiveMemoryWarning()

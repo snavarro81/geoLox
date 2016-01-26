@@ -33,7 +33,34 @@ class AddReportController: UIViewController, geoMapDelegate, UITextViewDelegate 
         btnSubmitReport.layer.cornerRadius = 10;
         
         btnSubmitReport.clipsToBounds = true;
+        
+        
+        
+        //TODO
+        //NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil);
+        
+        //NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
     }
+   
+    //TODO
+    //func keyboardWasShown(notification: NSNotification) {
+    //    var info = notification.userInfo!
+    //    var keyboardFrame: CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+        
+    //    UIView.animateWithDuration(0.1, animations: { () -> Void in
+            //self.bottomConstraint.constant = keyboardFrame.size.height + 20
+    //    })
+    //}
+
+    //func keyboardWillHide(notification: NSNotification) {
+        //    var info = notification.userInfo!
+        //    var keyboardFrame: CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+        
+        //    UIView.animateWithDuration(0.1, animations: { () -> Void in
+        //self.bottomConstraint.constant = keyboardFrame.size.height + 20
+        //    })
+    //}
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -50,6 +77,7 @@ class AddReportController: UIViewController, geoMapDelegate, UITextViewDelegate 
     
     func mapTouchMove(controller: geoMap){
         btnSubmitReport.hidden = true;
+        //SomeManager.sharedInstance.
     }
     
     func mapTouchMoveEnded(controller: geoMap){
