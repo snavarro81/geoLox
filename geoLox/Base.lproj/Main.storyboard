@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Mi ciudad-->
@@ -95,40 +94,27 @@
                                     <constraint firstAttribute="trailing" secondItem="1y9-5M-Typ" secondAttribute="trailing" constant="85" id="tTw-bB-d7Y"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pin_small.png" translatesAutoresizingMaskIntoConstraints="NO" id="xW3-7W-OGT">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="pin_small.png" translatesAutoresizingMaskIntoConstraints="NO" id="xW3-7W-OGT">
                                 <rect key="frame" x="131" y="265" width="58" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="58" id="r4Z-Ae-1nn"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kxX-rB-t5Z">
-                                <rect key="frame" x="40" y="233" width="240" height="128"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9Ht-b4-a3N">
+                                <rect key="frame" x="40" y="220" width="240" height="128"/>
                                 <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="0.63" colorSpace="calibratedRGB"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9Ht-b4-a3N">
-                                <rect key="frame" x="40" y="233" width="240" height="128"/>
-                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="0.63" colorSpace="calibratedRGB"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="xW3-7W-OGT" firstAttribute="centerX" secondItem="9Ht-b4-a3N" secondAttribute="centerX" id="AZI-on-lUd"/>
                             <constraint firstItem="gDK-9y-Jmi" firstAttribute="bottom" secondItem="DLL-Ft-txR" secondAttribute="top" id="CfN-Sx-FuG"/>
                             <constraint firstItem="xW3-7W-OGT" firstAttribute="centerY" secondItem="y0g-ud-tGf" secondAttribute="centerY" id="GNN-bw-aGF"/>
-                            <constraint firstItem="9Ht-b4-a3N" firstAttribute="top" secondItem="4dN-MS-22q" secondAttribute="bottom" constant="169" id="GhU-Ti-1CS"/>
-                            <constraint firstItem="9Ht-b4-a3N" firstAttribute="leading" secondItem="y0g-ud-tGf" secondAttribute="leadingMargin" constant="24" id="bYR-Hf-xkB"/>
-                            <constraint firstItem="9Ht-b4-a3N" firstAttribute="centerX" secondItem="gDK-9y-Jmi" secondAttribute="centerX" id="dkS-yW-KtL"/>
                             <constraint firstAttribute="trailing" secondItem="gDK-9y-Jmi" secondAttribute="trailing" id="dkd-sF-TBg"/>
                             <constraint firstItem="gDK-9y-Jmi" firstAttribute="leading" secondItem="y0g-ud-tGf" secondAttribute="leading" id="kMR-HQ-bCG"/>
                             <constraint firstItem="gDK-9y-Jmi" firstAttribute="top" secondItem="4dN-MS-22q" secondAttribute="bottom" id="mut-nS-pvb"/>
                             <constraint firstItem="xW3-7W-OGT" firstAttribute="top" secondItem="4dN-MS-22q" secondAttribute="bottom" constant="201" id="yFb-tq-KOD"/>
-                            <constraint firstItem="DLL-Ft-txR" firstAttribute="top" secondItem="9Ht-b4-a3N" secondAttribute="bottom" constant="207" id="ylz-t3-Wbb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Reporte" id="bz3-RC-DjN">

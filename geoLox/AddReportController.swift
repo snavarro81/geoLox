@@ -19,6 +19,8 @@ class AddReportController: UIViewController, geoMapDelegate, UITextViewDelegate 
     
     @IBOutlet weak var txt: UITextView!
     
+    var kbHeight: CGFloat!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,23 +36,40 @@ class AddReportController: UIViewController, geoMapDelegate, UITextViewDelegate 
         
         btnSubmitReport.clipsToBounds = true;
         
-        
-        
         //TODO
-        //NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil);
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name: UIKeyboardWillShowNotification, object: nil)
         
-        //NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name: UIKeyboardWillHideNotification, object: nil)
     }
-   
-    //TODO
-    //func keyboardWasShown(notification: NSNotification) {
-    //    var info = notification.userInfo!
-    //    var keyboardFrame: CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+    
+    //
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
         
-    //    UIView.animateWithDuration(0.1, animations: { () -> Void in
-            //self.bottomConstraint.constant = keyboardFrame.size.height + 20
-    //    })
-    //}
+        return true
+    }
+    
+    func keyboardWillHide(notification: NSNotification) {
+        self.animateTextField(false)
+    }
+
+    //TODO Move upwards txt textview in case keyboard is shown
+    func keyboardWillShow(notification: NSNotification) {
+        if let userInfo = notification.userInfo {
+            if let keyboardSize =  (userInfo[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
+                kbHeight = keyboardSize.height - 150.00
+                self.animateTextField(true)
+            }
+        }
+    }
+    
+    func animateTextField(up: Bool) {
+        let movement = (up ? -kbHeight : kbHeight)
+        
+        UIView.animateWithDuration(0.3, animations: {
+            self.view.frame = CGRectOffset(self.view.frame, 0, movement)
+        })
+    }
 
     //func keyboardWillHide(notification: NSNotification) {
         //    var info = notification.userInfo!
@@ -60,6 +79,13 @@ class AddReportController: UIViewController, geoMapDelegate, UITextViewDelegate 
         //self.bottomConstraint.constant = keyboardFrame.size.height + 20
         //    })
     //}
+    
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
 
     
     override func didReceiveMemoryWarning() {
