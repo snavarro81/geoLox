@@ -21,6 +21,8 @@ class AddReportController: UIViewController, geoMapDelegate, UITextViewDelegate 
     
     var kbHeight: CGFloat!
     
+    var kbShown: Bool!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,26 +42,31 @@ class AddReportController: UIViewController, geoMapDelegate, UITextViewDelegate 
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name: UIKeyboardWillShowNotification, object: nil)
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name: UIKeyboardWillHideNotification, object: nil)
+    
     }
     
     //
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        
         return true
     }
-    
+
     func keyboardWillHide(notification: NSNotification) {
+        kbShown = false
         self.animateTextField(false)
     }
 
     //TODO Move upwards txt textview in case keyboard is shown
     func keyboardWillShow(notification: NSNotification) {
-        if let userInfo = notification.userInfo {
-            if let keyboardSize =  (userInfo[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
-                kbHeight = keyboardSize.height - 150.00
-                self.animateTextField(true)
+        
+        if (kbShown != true) {
+            if let userInfo = notification.userInfo {
+                if let keyboardSize =  (userInfo[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
+                    kbHeight = keyboardSize.height - 150.00
+                    self.animateTextField(true)
+                }
             }
+            kbShown = true
         }
     }
     
