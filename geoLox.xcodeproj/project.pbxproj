@@ -17,6 +17,8 @@
 		2FA3255F1C2633F5004FDFE4 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA3255E1C2633F5004FDFE4 /* MenuController.swift */; };
 		2FA325611C2639D3004FDFE4 /* NewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA325601C2639D3004FDFE4 /* NewsController.swift */; };
 		2FB014FF1C56F48900BB7CA9 /* ReportData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB014FE1C56F48900BB7CA9 /* ReportData.swift */; };
+		2FB48F701C59AED1008E60A6 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FB48F6F1C59AED1008E60A6 /* FBSDKCoreKit.framework */; };
+		2FB48F721C59AEDD008E60A6 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FB48F711C59AEDD008E60A6 /* FBSDKLoginKit.framework */; };
 		2FCA02CF1C068D730042A783 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCA02CE1C068D730042A783 /* AppDelegate.swift */; };
 		2FCA02D11C068D730042A783 /* ReportsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCA02D01C068D730042A783 /* ReportsListController.swift */; };
 		2FCA02D41C068D730042A783 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FCA02D21C068D730042A783 /* Main.storyboard */; };
@@ -42,6 +44,8 @@
 		2FA3255E1C2633F5004FDFE4 /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		2FA325601C2639D3004FDFE4 /* NewsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsController.swift; sourceTree = "<group>"; };
 		2FB014FE1C56F48900BB7CA9 /* ReportData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportData.swift; sourceTree = "<group>"; };
+		2FB48F6F1C59AED1008E60A6 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "../../Downloads/FacebookSDKs-iOS-20160115/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
+		2FB48F711C59AEDD008E60A6 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "../../Downloads/FacebookSDKs-iOS-20160115/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
 		2FCA02CB1C068D730042A783 /* geoLox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = geoLox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FCA02CE1C068D730042A783 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2FCA02D01C068D730042A783 /* ReportsListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsListController.swift; sourceTree = "<group>"; };
@@ -61,6 +65,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FB48F721C59AEDD008E60A6 /* FBSDKLoginKit.framework in Frameworks */,
+				2FB48F701C59AED1008E60A6 /* FBSDKCoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +92,8 @@
 		2FCA02C21C068D730042A783 = {
 			isa = PBXGroup;
 			children = (
+				2FB48F711C59AEDD008E60A6 /* FBSDKLoginKit.framework */,
+				2FB48F6F1C59AED1008E60A6 /* FBSDKCoreKit.framework */,
 				2FCA02CD1C068D730042A783 /* geoLox */,
 				2FCA02CC1C068D730042A783 /* Products */,
 			);
