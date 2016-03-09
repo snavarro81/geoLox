@@ -77,6 +77,6 @@ class ModalCategoryController: UIViewController, UICollectionViewDelegate, UICol
         //self.performSegueWithIdentifier("Report", sender: self)
         self.dismissViewControllerAnimated(true, completion: nil)
         
-        delegate.myModalDidFinish(self, category: "")
+        //delegate.myModalDidFinish(self, category: "")
     }
 }

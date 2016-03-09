@@ -26,7 +26,7 @@
                   moduleName = "geoLox"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/snavarro/Documents/geoLox/geoLox/AddReportController.swift"
-                  timestampString = "479185624.660542"
+                  timestampString = "479186025.128503"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -41,7 +41,7 @@
                   moduleName = "geoLox"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/snavarro/Documents/geoLox/geoLox/AddReportController.swift"
-                  timestampString = "479185624.66077"
+                  timestampString = "479186025.128761"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -56,7 +56,7 @@
                   moduleName = "geoLox"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/snavarro/Documents/geoLox/geoLox/AddReportController.swift"
-                  timestampString = "479185624.660956"
+                  timestampString = "479186025.128938"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -85,16 +85,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "geoLox/ReportsListController.swift"
-            timestampString = "479185525.80545"
+            timestampString = "479186024.101324"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119"
-            landmarkName = "myModalDidFinish(_:category:)"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
+            landmarkName = "mapTouchMoveEnded(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
