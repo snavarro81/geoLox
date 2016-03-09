@@ -2,6 +2,8 @@
 //  geoMap.swift
 //  geoLox
 //
+// user control con mapa
+//
 //  Created by snavarro on 11/27/15.
 //  Copyright © 2015 snavarro. All rights reserved.
 //

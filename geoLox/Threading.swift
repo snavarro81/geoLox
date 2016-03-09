@@ -3,7 +3,7 @@
 //
 //
 //  Created by Navarro Sebastian.
-//  Copyright (c) 2014 iJoshSmith. All rights reserved.
+//  Copyright (c) 2016 iJoshSmith. All rights reserved.
 //
 
 import Foundation

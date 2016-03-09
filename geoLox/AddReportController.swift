@@ -28,8 +28,8 @@ class AddReportController: UIViewController, geoMapDelegate, UITextViewDelegate 
         
         // Do any additional setup after loading the view, typically from a nib.
         geoV.delegate = self;
-        txt.delegate = self;
         
+        txt.delegate = self;
         
         //txt.backgroundColor = UIColor.clearColor();
         
@@ -43,6 +43,10 @@ class AddReportController: UIViewController, geoMapDelegate, UITextViewDelegate 
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name: UIKeyboardWillHideNotification, object: nil)
     
+        //TODO load async markups, category by default
+        
+        
+        
     }
     
     //

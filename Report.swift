@@ -2,6 +2,9 @@
 //  Report.swift
 //  geoLox
 //
+//  Objeto reporte, contendra todos los datos del reporte
+//  report object . it contains all data related to the report as atributes
+//
 //  Created by snavarro on 12/6/15.
 //  Copyright © 2015 snavarro. All rights reserved.
 //

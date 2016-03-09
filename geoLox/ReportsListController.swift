@@ -1,12 +1,12 @@
 //
-//  ViewController.swift
+//  ReportsListController
 //  geoLox
 //
-//
-//
+//  Lista los markups de los reportes sobre el mapa.
+//  Permite filtros.
+//  Acceso a pantalla con lista
 //
 //  Created by snavarro on 11/25/15.
-//  Copyright © 2015 snavarro. All rights reserved.
 //
 
 import UIKit
@@ -17,9 +17,17 @@ import MapKit
 //}
 
 //class ReportsListController: UIViewController , MKMapViewDelegate{
-class ReportsListController: UIViewController , geoMapDelegate {
+class ReportsListController: UIViewController , geoMapDelegate, CategoryModalDelegate {
+    
     
     @IBOutlet weak var geoV: geoMap!
+    
+    
+    
+    //instancia referencia al objeto modal!
+    //let pieVC = MyModalVC(nibName: "MyModalVC", bundle: nil)
+    
+    
     
     //let geoV = geoMap(nibName: "geoMap", bundle: nil)
     
@@ -49,6 +57,8 @@ class ReportsListController: UIViewController , geoMapDelegate {
         
         geoV.delegate = self
         
+        //pieVC.delegate = self
+        
         // Do any additional setup after loading the view, typically from a nib.
         
         //initialLoc = CLLocation(latitude: 21.282778, longitude: -157.829444)
@@ -56,8 +66,6 @@ class ReportsListController: UIViewController , geoMapDelegate {
         //centerMapOnLocation(initialLoc);
         
         //listMapView.delegate = self;
-        
-        
     }
     
     
@@ -109,6 +117,13 @@ class ReportsListController: UIViewController , geoMapDelegate {
     
     func mapTouchMoveEnded(controller: geoMap) {
         //var a : String = "dsd"
+    }
+    
+    //MARK - Delegate Methods
+    func myModalDidFinish(controller: ModalCategoryController, category: String) {
+        
+        //statusLabel.text = "Order " + pie + " pie"
+        //controller.dismissViewControllerAnimated(true, completion: nil)
     }
 }
 

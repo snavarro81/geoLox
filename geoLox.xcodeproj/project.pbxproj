@@ -8,17 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		2F0346911C069E6A00575EA0 /* AddReportController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0346901C069E6A00575EA0 /* AddReportController.swift */; };
+		2F04529B1C84D55600FE5AA1 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F04529A1C84D55600FE5AA1 /* SWRevealViewController.m */; };
 		2F0A5AD81C0D487F0006D785 /* WildcardGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A5AD71C0D487F0006D785 /* WildcardGestureRecognizer.swift */; };
+		2F1397EF1C88C0FD00501F39 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1397EE1C88C0FD00501F39 /* CollectionViewCell.swift */; };
 		2F1DE52A1C49C98400D350F7 /* ModalCategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1DE5291C49C98400D350F7 /* ModalCategoryController.swift */; };
-		2F24C5DB1C15F60C009EC287 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F24C5DA1C15F60C009EC287 /* SWRevealViewController.m */; };
 		2F6B860F1C13911800AF006C /* pin_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F6B860E1C13911800AF006C /* pin_small.png */; };
 		2F9DD8EE1C0FDB720077D45A /* Threading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9DD8ED1C0FDB720077D45A /* Threading.swift */; };
 		2F9F69301C08DB8800E9568A /* LocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9F692F1C08DB8800E9568A /* LocationController.swift */; };
 		2FA3255F1C2633F5004FDFE4 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA3255E1C2633F5004FDFE4 /* MenuController.swift */; };
 		2FA325611C2639D3004FDFE4 /* NewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA325601C2639D3004FDFE4 /* NewsController.swift */; };
 		2FB014FF1C56F48900BB7CA9 /* ReportData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB014FE1C56F48900BB7CA9 /* ReportData.swift */; };
-		2FB48F701C59AED1008E60A6 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FB48F6F1C59AED1008E60A6 /* FBSDKCoreKit.framework */; };
-		2FB48F721C59AEDD008E60A6 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FB48F711C59AEDD008E60A6 /* FBSDKLoginKit.framework */; };
 		2FCA02CF1C068D730042A783 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCA02CE1C068D730042A783 /* AppDelegate.swift */; };
 		2FCA02D11C068D730042A783 /* ReportsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCA02D01C068D730042A783 /* ReportsListController.swift */; };
 		2FCA02D41C068D730042A783 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FCA02D21C068D730042A783 /* Main.storyboard */; };
@@ -33,10 +32,11 @@
 
 /* Begin PBXFileReference section */
 		2F0346901C069E6A00575EA0 /* AddReportController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddReportController.swift; sourceTree = "<group>"; };
+		2F0452991C84D55600FE5AA1 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		2F04529A1C84D55600FE5AA1 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		2F0A5AD71C0D487F0006D785 /* WildcardGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WildcardGestureRecognizer.swift; sourceTree = "<group>"; };
+		2F1397EE1C88C0FD00501F39 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		2F1DE5291C49C98400D350F7 /* ModalCategoryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalCategoryController.swift; sourceTree = "<group>"; };
-		2F24C5D91C15F60C009EC287 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = ../../../Downloads/SlideoutMenu/SlideoutMenu/SWRevealViewController.h; sourceTree = "<group>"; };
-		2F24C5DA1C15F60C009EC287 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = ../../../Downloads/SlideoutMenu/SlideoutMenu/SWRevealViewController.m; sourceTree = "<group>"; };
 		2F24C5DC1C15F823009EC287 /* geoLox-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "geoLox-Bridging-Header.h"; sourceTree = "<group>"; };
 		2F6B860E1C13911800AF006C /* pin_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin_small.png; sourceTree = "<group>"; };
 		2F9DD8ED1C0FDB720077D45A /* Threading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Threading.swift; sourceTree = "<group>"; };
@@ -44,8 +44,6 @@
 		2FA3255E1C2633F5004FDFE4 /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		2FA325601C2639D3004FDFE4 /* NewsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsController.swift; sourceTree = "<group>"; };
 		2FB014FE1C56F48900BB7CA9 /* ReportData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportData.swift; sourceTree = "<group>"; };
-		2FB48F6F1C59AED1008E60A6 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "../../Downloads/FacebookSDKs-iOS-20160115/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
-		2FB48F711C59AEDD008E60A6 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "../../Downloads/FacebookSDKs-iOS-20160115/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
 		2FCA02CB1C068D730042A783 /* geoLox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = geoLox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FCA02CE1C068D730042A783 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2FCA02D01C068D730042A783 /* ReportsListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsListController.swift; sourceTree = "<group>"; };
@@ -65,8 +63,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FB48F721C59AEDD008E60A6 /* FBSDKLoginKit.framework in Frameworks */,
-				2FB48F701C59AED1008E60A6 /* FBSDKCoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,8 +88,6 @@
 		2FCA02C21C068D730042A783 = {
 			isa = PBXGroup;
 			children = (
-				2FB48F711C59AEDD008E60A6 /* FBSDKLoginKit.framework */,
-				2FB48F6F1C59AED1008E60A6 /* FBSDKCoreKit.framework */,
 				2FCA02CD1C068D730042A783 /* geoLox */,
 				2FCA02CC1C068D730042A783 /* Products */,
 			);
@@ -159,11 +153,12 @@
 		2FEA160C1C0FC73A00F9D208 /* aux */ = {
 			isa = PBXGroup;
 			children = (
-				2F24C5D91C15F60C009EC287 /* SWRevealViewController.h */,
-				2F24C5DA1C15F60C009EC287 /* SWRevealViewController.m */,
+				2F0452991C84D55600FE5AA1 /* SWRevealViewController.h */,
+				2F04529A1C84D55600FE5AA1 /* SWRevealViewController.m */,
 				2F9F692F1C08DB8800E9568A /* LocationController.swift */,
 				2F0A5AD71C0D487F0006D785 /* WildcardGestureRecognizer.swift */,
 				2F9DD8ED1C0FDB720077D45A /* Threading.swift */,
+				2F1397EE1C88C0FD00501F39 /* CollectionViewCell.swift */,
 			);
 			name = aux;
 			sourceTree = "<group>";
@@ -253,6 +248,7 @@
 			files = (
 				2FA325611C2639D3004FDFE4 /* NewsController.swift in Sources */,
 				2F9DD8EE1C0FDB720077D45A /* Threading.swift in Sources */,
+				2F04529B1C84D55600FE5AA1 /* SWRevealViewController.m in Sources */,
 				2FE5B24C1C14A58E002541A7 /* Report.swift in Sources */,
 				2F0A5AD81C0D487F0006D785 /* WildcardGestureRecognizer.swift in Sources */,
 				2FCA02D11C068D730042A783 /* ReportsListController.swift in Sources */,
@@ -260,10 +256,10 @@
 				2F0346911C069E6A00575EA0 /* AddReportController.swift in Sources */,
 				2F1DE52A1C49C98400D350F7 /* ModalCategoryController.swift in Sources */,
 				2FCB26D41C094D9E00016DAA /* geoMap.swift in Sources */,
+				2F1397EF1C88C0FD00501F39 /* CollectionViewCell.swift in Sources */,
 				2FCA02CF1C068D730042A783 /* AppDelegate.swift in Sources */,
 				2F9F69301C08DB8800E9568A /* LocationController.swift in Sources */,
 				2FB014FF1C56F48900BB7CA9 /* ReportData.swift in Sources */,
-				2F24C5DB1C15F60C009EC287 /* SWRevealViewController.m in Sources */,
 				2FE5B24B1C14A58E002541A7 /* Report+CoreDataProperties.swift in Sources */,
 				2FCA02D71C068D730042A783 /* geoLox.xcdatamodeld in Sources */,
 			);

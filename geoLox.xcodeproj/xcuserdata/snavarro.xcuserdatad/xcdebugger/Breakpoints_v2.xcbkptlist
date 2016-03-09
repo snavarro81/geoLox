@@ -26,7 +26,7 @@
                   moduleName = "geoLox"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/snavarro/Documents/geoLox/geoLox/AddReportController.swift"
-                  timestampString = "475558650.283686"
+                  timestampString = "479185624.660542"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -41,7 +41,7 @@
                   moduleName = "geoLox"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/snavarro/Documents/geoLox/geoLox/AddReportController.swift"
-                  timestampString = "475558650.283895"
+                  timestampString = "479185624.66077"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -56,7 +56,7 @@
                   moduleName = "geoLox"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/snavarro/Documents/geoLox/geoLox/AddReportController.swift"
-                  timestampString = "475558650.284051"
+                  timestampString = "479185624.660956"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -64,6 +64,38 @@
                   offsetFromSymbolStart = "28">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "geoLox/ModalCategoryController.swift"
+            timestampString = "479185242.293366"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "BackAction(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "geoLox/ReportsListController.swift"
+            timestampString = "479185525.80545"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
+            landmarkName = "myModalDidFinish(_:category:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
