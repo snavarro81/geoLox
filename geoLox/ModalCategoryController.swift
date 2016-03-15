@@ -18,11 +18,13 @@ class ModalCategoryController: UIViewController, UICollectionViewDelegate, UICol
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var selectedCategory: String? = ""
+    
     let categories =  [
         "Categoria 1"," Categoria 2"," Categoria 3"," Categoria 4"
         ,"Categoria 5"," Categoria 6"," Categoria 7"," Categoria 8"
-        ,"Categoria 5"," Categoria 6"," Categoria 7"," Categoria 8"
-        ,"Categoria 5"," Categoria 6"," Categoria 7"," Categoria 8"]
+        ,"Categoria 9"," Categoria 10"," Categoria 11"," Categoria 12"
+        ,"Categoria 13"," Categoria 14"," Categoria 15"," Categoria 16"]
     
     let iconArray =  [
         UIImage(named: "icon"),UIImage(named: "icon"),UIImage(named: "icon"),UIImage(named: "icon")
@@ -64,19 +66,32 @@ class ModalCategoryController: UIViewController, UICollectionViewDelegate, UICol
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as!
         CollectionViewCell
-        
         cell.imageView?.image = self.iconArray[indexPath.row]
-        
-        cell.categoryName?.text = self.categories   [indexPath.row]
-        
+        cell.categoryName?.text = self.categories[indexPath.row]
         return cell;
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath)
     {
         //self.performSegueWithIdentifier("Report", sender: self)
-        self.dismissViewControllerAnimated(true, completion: nil)
+        //self.dismissViewControllerAnimated(true, completion: nil)
         
         //delegate.myModalDidFinish(self, category: "")
+        
+        //var selectedLabel : UILabel? = nil
+        //selectedLabel = self.categories[indexPath.row]
+        
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as!
+        CollectionViewCell
+        
+        self.selectedCategory=cell.categoryName?.text
+        
+        self.performSegueWithIdentifier("categorySelected", sender: self)
+        
+        //self.selectedCategory = cell.c
+        // manipulate cell
+        
+        //self.selectedCategory = collec
+        //self.performSegueWithIdentifier("colorSelected", sender: self)
     }
 }

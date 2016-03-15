@@ -30,9 +30,18 @@
                                 <rect key="frame" x="137" y="269" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="ZP6-XE-Ydh" kind="modal" id="o34-Il-brt"/>
+                                    <segue destination="900-ML-Zql" kind="modal" id="dhy-Ic-MZW"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1MJ-hh-pox">
+                                <rect key="frame" x="102" y="274" width="115" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="NfK-9x-gcd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -221,6 +230,22 @@
             </objects>
             <point key="canvasLocation" x="541" y="-1565"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gEu-uh-xwi">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Aa-5N-AIk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="900-ML-Zql" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fPY-Ae-srH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ZP6-XE-Ydh" kind="relationship" relationship="rootViewController" id="kTj-ul-OdC"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="1035" y="-860"/>
+        </scene>
         <!--Modal Category Controller-->
         <scene sceneID="AOi-CL-yJ8">
             <objects>
@@ -239,6 +264,7 @@
                                 <state key="normal" title="Cancelar"/>
                                 <connections>
                                     <action selector="BackAction:" destination="ZP6-XE-Ydh" eventType="touchUpInside" id="Wyr-IB-OrC"/>
+                                    <segue destination="8a7-b5-bjm" kind="unwind" identifier="categorySelected" unwindAction="unwindToViewController:" id="ehl-V3-ngk"/>
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" indicatorStyle="black" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eRQ-7C-b0K">
@@ -301,13 +327,15 @@
                             <constraint firstItem="Gum-zI-Uht" firstAttribute="leading" secondItem="LUI-8a-ekv" secondAttribute="leadingMargin" constant="-11" id="k8P-pE-rV9"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="ZIQ-yg-DBV"/>
                     <connections>
                         <outlet property="collectionView" destination="eRQ-7C-b0K" id="FZA-OP-j33"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eZ6-Io-SQU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="8a7-b5-bjm" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1043" y="-546"/>
+            <point key="canvasLocation" x="1620" y="-860"/>
         </scene>
         <!--Menu Controller-->
         <scene sceneID="TkQ-5r-ytN">

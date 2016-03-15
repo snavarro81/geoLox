@@ -19,10 +19,11 @@ import MapKit
 //class ReportsListController: UIViewController , MKMapViewDelegate{
 class ReportsListController: UIViewController , geoMapDelegate, CategoryModalDelegate {
     
+    @IBOutlet weak var lblCategory: UILabel!
     
     @IBOutlet weak var geoV: geoMap!
     
-    
+    var selectedCategory: String? = ""
     
     //instancia referencia al objeto modal!
     //let pieVC = MyModalVC(nibName: "MyModalVC", bundle: nil)
@@ -127,6 +128,20 @@ class ReportsListController: UIViewController , geoMapDelegate, CategoryModalDel
         //statusLabel.text = "Order " + pie + " pie"
         //controller.dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    @IBAction func unwindToViewController(sender: UIStoryboardSegue) {
+        if (sender.identifier != nil) {
+            if sender.identifier == "categorySelected" {
+                let mController = sender.sourceViewController as! ModalCategoryController
+                self.selectedCategory = mController.selectedCategory;
+                //dispatch_async(dispatch_get_main_queue()) {
+                //    self.lblCategory?.text = "sebas"
+                //}
+            }
+        }
+        //trigger segue to add report
+    }
+
 }
 
 
