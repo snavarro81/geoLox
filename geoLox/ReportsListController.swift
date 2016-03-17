@@ -58,6 +58,9 @@ class ReportsListController: UIViewController , geoMapDelegate, CategoryModalDel
         
         geoV.delegate = self
         
+        self.lblCategory?.text =  "sebas"
+        
+        
         //makeapppie.com/tag/modal-view-in-swift/
         //gracefullycoded.com/display-a-popover-in-swift/
         //pieVC.delegate = self
@@ -134,12 +137,26 @@ class ReportsListController: UIViewController , geoMapDelegate, CategoryModalDel
             if sender.identifier == "categorySelected" {
                 let mController = sender.sourceViewController as! ModalCategoryController
                 self.selectedCategory = mController.selectedCategory;
-                //dispatch_async(dispatch_get_main_queue()) {
-                //    self.lblCategory?.text = "sebas"
-                //}
+                dispatch_async(dispatch_get_main_queue()) {
+                    self.lblCategory?.text = SomeManager.sharedInstance.rptMainTitle
+                    
+                }
+                
+                _ = setTimeout(0.05, block: { () -> Void in
+                    // do this stuff after 0.35 seconds
+                    self.performSegueWithIdentifier("report", sender: self)
+                })
+                
+                // Later on cancel it
+                //handle.invalidate()
+                
+                
             }
         }
-        //trigger segue to add report
+    }
+    
+    func setTimeout(delay:NSTimeInterval, block:()->Void) -> NSTimer {
+        return NSTimer.scheduledTimerWithTimeInterval(delay, target: NSBlockOperation(block: block), selector: "main", userInfo: nil, repeats: false)
     }
 
 }

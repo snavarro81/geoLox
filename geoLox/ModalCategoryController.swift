@@ -79,12 +79,16 @@ class ModalCategoryController: UIViewController, UICollectionViewDelegate, UICol
         //delegate.myModalDidFinish(self, category: "")
         
         //var selectedLabel : UILabel? = nil
-        //selectedLabel = self.categories[indexPath.row]
         
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as!
-        CollectionViewCell
         
-        self.selectedCategory=cell.categoryName?.text
+        let sCategory : String?  = self.categories[indexPath.row]
+        
+        //let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as!
+        //CollectionViewCell
+        
+        self.selectedCategory = sCategory
+        
+        SomeManager.sharedInstance.rptMainTitle = selectedCategory
         
         self.performSegueWithIdentifier("categorySelected", sender: self)
         

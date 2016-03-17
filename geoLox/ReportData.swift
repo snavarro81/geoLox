@@ -13,4 +13,7 @@ import Foundation
 //Singleton object
 class SomeManager {
     static let sharedInstance = SomeManager()
+    
+    var rptMainTitle : String?
+    
 }

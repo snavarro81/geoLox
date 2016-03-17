@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "ModalCategoryController.collectionView(UICollectionView, didSelectItemAtIndexPath : NSIndexPath) -&gt; ():ModalCategoryController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "indexPath">
+            </PersistentString>
+            <PersistentString
+               value = "SomeManager.sharedInstance.rptMainTitle">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ReportsListController.(unwindToViewController(ReportsListController) -&gt; (UIStoryboardSegue) -&gt; ()).(closure #1):ReportsListController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "SomeManager.sharedInstance.rptMainTitle">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ReportsListController.unwindToViewController(UIStoryboardSegue) -&gt; ():ReportsListController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "SomeManager.sharedInstance.rptMainTitle">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

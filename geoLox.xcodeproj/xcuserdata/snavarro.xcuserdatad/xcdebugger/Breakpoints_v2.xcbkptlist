@@ -22,16 +22,31 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "geoLox.AddReportController.init (geoLox.AddReportController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; geoLox.AddReportController"
+                  symbolName = "geoLox.AddReportController.__deallocating_deinit"
                   moduleName = "geoLox"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/snavarro/Documents/geoLox/geoLox/AddReportController.swift"
-                  timestampString = "479703670.247282"
+                  timestampString = "479877004.049378"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
                   endingLineNumber = "0"
-                  offsetFromSymbolStart = "70">
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "geoLox.AddReportController.init (geoLox.AddReportController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; geoLox.AddReportController"
+                  moduleName = "geoLox"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/snavarro/Documents/geoLox/geoLox/AddReportController.swift"
+                  timestampString = "479877004.049586"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "68">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -41,12 +56,12 @@
                   moduleName = "geoLox"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/snavarro/Documents/geoLox/geoLox/AddReportController.swift"
-                  timestampString = "479703670.247481"
+                  timestampString = "479877004.049767"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
                   endingLineNumber = "0"
-                  offsetFromSymbolStart = "27">
+                  offsetFromSymbolStart = "28">
                </Location>
             </Locations>
          </BreakpointContent>
