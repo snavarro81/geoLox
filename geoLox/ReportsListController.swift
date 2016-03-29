@@ -149,8 +149,6 @@ class ReportsListController: UIViewController , geoMapDelegate, CategoryModalDel
                 
                 // Later on cancel it
                 //handle.invalidate()
-                
-                
             }
         }
     }

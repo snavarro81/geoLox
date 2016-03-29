@@ -13,6 +13,7 @@
 		2F1397EF1C88C0FD00501F39 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1397EE1C88C0FD00501F39 /* CollectionViewCell.swift */; };
 		2F1DE52A1C49C98400D350F7 /* ModalCategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1DE5291C49C98400D350F7 /* ModalCategoryController.swift */; };
 		2F6B860F1C13911800AF006C /* pin_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F6B860E1C13911800AF006C /* pin_small.png */; };
+		2F91E8FD1CAA2062005AFADF /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 2F91E8FC1CAA2062005AFADF /* data.json */; };
 		2F9DD8EE1C0FDB720077D45A /* Threading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9DD8ED1C0FDB720077D45A /* Threading.swift */; };
 		2F9F69301C08DB8800E9568A /* LocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9F692F1C08DB8800E9568A /* LocationController.swift */; };
 		2FA3255F1C2633F5004FDFE4 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA3255E1C2633F5004FDFE4 /* MenuController.swift */; };
@@ -39,6 +40,7 @@
 		2F1DE5291C49C98400D350F7 /* ModalCategoryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalCategoryController.swift; sourceTree = "<group>"; };
 		2F24C5DC1C15F823009EC287 /* geoLox-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "geoLox-Bridging-Header.h"; sourceTree = "<group>"; };
 		2F6B860E1C13911800AF006C /* pin_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin_small.png; sourceTree = "<group>"; };
+		2F91E8FC1CAA2062005AFADF /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		2F9DD8ED1C0FDB720077D45A /* Threading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Threading.swift; sourceTree = "<group>"; };
 		2F9F692F1C08DB8800E9568A /* LocationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationController.swift; sourceTree = "<group>"; };
 		2FA3255E1C2633F5004FDFE4 /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				2FCA02D81C068D730042A783 /* Assets.xcassets */,
 				2FCA02DD1C068D730042A783 /* Info.plist */,
 				2FCA02D51C068D730042A783 /* geoLox.xcdatamodeld */,
+				2F91E8FC1CAA2062005AFADF /* data.json */,
 			);
 			path = geoLox;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FCB26D61C094DB300016DAA /* geoMap.xib in Resources */,
+				2F91E8FD1CAA2062005AFADF /* data.json in Resources */,
 				2FCA02DC1C068D730042A783 /* LaunchScreen.storyboard in Resources */,
 				2FCA02D91C068D730042A783 /* Assets.xcassets in Resources */,
 				2FCA02D41C068D730042A783 /* Main.storyboard in Resources */,
