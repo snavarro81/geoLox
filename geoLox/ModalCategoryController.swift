@@ -93,6 +93,9 @@ class ModalCategoryController: UIViewController, UICollectionViewDelegate, UICol
         CollectionViewCell
         cell.imageView?.image = UIImage(named: (self.aCategories[indexPath.row] as! category).icon)
         cell.categoryName?.text = (self.aCategories[indexPath.row] as! category).categoryName
+        
+        self.selectedCategory = cell.categoryName?.text
+        
         return cell;
     }
     
