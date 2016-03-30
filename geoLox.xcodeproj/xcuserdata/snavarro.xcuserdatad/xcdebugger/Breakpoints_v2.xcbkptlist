@@ -26,7 +26,7 @@
                   moduleName = "geoLox"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/snavarro/Documents/geoLox/geoLox/AddReportController.swift"
-                  timestampString = "480911867.705428"
+                  timestampString = "480996609.186425"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -41,7 +41,7 @@
                   moduleName = "geoLox"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/snavarro/Documents/geoLox/geoLox/AddReportController.swift"
-                  timestampString = "480911867.705741"
+                  timestampString = "480996609.18659"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -58,12 +58,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "geoLox/ModalCategoryController.swift"
-            timestampString = "480911820.874505"
+            timestampString = "480993737.52867"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "212"
-            endingLineNumber = "212"
-            landmarkName = "collectionView(_:didSelectItemAtIndexPath:)"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -74,12 +74,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "geoLox/ModalCategoryController.swift"
-            timestampString = "480911911.585563"
+            timestampString = "480993890.221209"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
-            landmarkName = "parseResponse()"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "getJsonCategoryData()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -1,16 +1,22 @@
 {
-    "employees": [
-                  {
-                  "firstName": "John",
-                  "lastName": "Doe"
-                  },
-                  {
-                  "firstName": "Anna",
-                  "lastName": "Smith"
-                  },
-                  {
-                  "firstName": "Peter",
-                  "lastName": "Jones"
-                  }
-                  ]
+    "categories": [
+                   {
+                        "categoryId" : 1,
+                        "categoryName": "Categoria 1",
+                        "typeId": 1,
+                        "icon" : "icon"
+                   },
+                   {
+                        "categoryId" : 2,
+                        "categoryName": "Categoria 2",
+                        "typeId": 2,
+                        "icon": "icon"
+                   },
+                   {
+                        "categoryId" : 3,
+                        "categoryName": "Categoria 3",
+                        "typeId": 3,
+                        "icon" : "icon"
+                   }
+    ]
 }
