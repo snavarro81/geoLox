@@ -9,12 +9,11 @@
 import UIKit
 import Foundation
 import CoreData
+import Alamofire
 
 protocol CategoryModalDelegate{
     func myModalDidFinish(controller:ModalCategoryController, category:String)
 }
-
-
 
 //read json content from file data.json
 func getJsonCategoryData() -> [String : AnyObject] {
@@ -29,7 +28,6 @@ func getJsonCategoryData() -> [String : AnyObject] {
 }
 
 class category {
-    
     let id      : NSNumber
     let categoryName  : String
     let icon: String
@@ -41,6 +39,19 @@ class category {
     }
 }
 
+
+//Arrange your model classes
+class Object {
+    var id: Int = 182371823
+}
+class Animal: Object {
+    var weight: Double = 2.5
+    var age: Int = 2
+    var name: String? = "An animal"
+}
+class Cat: Animal {
+    var fur: Bool = true
+}
 
 class ModalCategoryController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource  {
     
@@ -57,16 +68,30 @@ class ModalCategoryController: UIViewController, UICollectionViewDelegate, UICol
         //print("JSON category data: \(json)")
         let employees = jsonData["categories"] as! [[String : AnyObject]]
         
+        //loop through employees object, object value for "categories" key value
         for employee in employees {
             let categoryId = employee["categoryId"] as! NSNumber
             let categoryName = employee["categoryName"] as! String
             let type = employee["typeId"] as! NSNumber
             let icon = employee["icon"] as! String
             
+            //array of objects
             aCategories.append(category(id: categoryId, categoryName: categoryName, icon: icon))
             
             //print("category: \(categoryId) \(categoryName)")
         }
+        
+        
+        let m = Cat()
+        
+        //Act
+        let json = JSONSerializer.toJson(m)
+        
+        //Assert
+        let expected = "{\"fur\": true, \"weight\": 2.5, \"age\": 2, \"name\": \"An animal\", \"id\": 182371823}"
+        
+        let isEqual = (json == expected)
+        //stringCompareHelper(json, expected) //returns true
 
         super.viewDidLoad()
     }
@@ -89,9 +114,11 @@ class ModalCategoryController: UIViewController, UICollectionViewDelegate, UICol
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as!
-        CollectionViewCell
+        
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! CollectionViewCell
+        
         cell.imageView?.image = UIImage(named: (self.aCategories[indexPath.row] as! category).icon)
+        
         cell.categoryName?.text = (self.aCategories[indexPath.row] as! category).categoryName
         
         self.selectedCategory = cell.categoryName?.text
@@ -100,7 +127,51 @@ class ModalCategoryController: UIViewController, UICollectionViewDelegate, UICol
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        
         SomeManager.sharedInstance.rptMainTitle = selectedCategory
+        
         self.performSegueWithIdentifier("categorySelected", sender: self)
+    }
+    
+    
+    
+    //----------------------------------------------------------------------------------------------------------------------------------
+    //funcion para obtener las categorias desde el server... 
+    //----------------------------------------------------------------------------------------------------------------------------------
+    //Pasos...
+    //1) Verificar cada cierto periodo
+    //2) Si ya es fecha, contactar al server, con la fecha de hoy, para verificar si es que hay un nuevo file
+    //3) retornar flag de si hay necesidad de actualizar, persistir en la app
+    //4) si flag es true, obtener el nvo json con las categorias ...
+    //5) persistir el archivo json con las categorias
+    
+    func obtenerCategoriasDeServer() -> [AnyObject]? {
+        
+        //enviar a cola concurrente
+        let queue = dispatch_queue_create("com.cnoon.manager-response-queue", DISPATCH_QUEUE_CONCURRENT)
+        
+        let request = Alamofire.request(.GET, "http://httpbin.org/get", parameters: ["foo": "bar"])
+        request.response(
+            queue: queue,  //ejecuta en cola concurrente
+            
+            responseSerializer: Request.JSONResponseSerializer(options: .AllowFragments),
+            
+            completionHandler: { response in
+                
+                // You are now running on the concurrent `queue` you created earlier.
+                print("Parsing JSON on thread: \(NSThread.currentThread()) is main thread: \(NSThread.isMainThread())")
+                
+                // Validate your JSON response and convert into model objects if necessary
+                // Valido el JSON que retorna y lo convierto a mi modelo de objetos si es necesario
+                print(response.result.value)
+                
+                // To update anything on the main thread, just jump back on like so.
+                dispatch_async(dispatch_get_main_queue()) {
+                    print("Am I back on the main thread: \(NSThread.isMainThread())")
+                }
+            }
+        )
+
+        return [];  //retorno diccionario con categorias, en forma de keyvalue array
     }
 }

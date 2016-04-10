@@ -16,7 +16,7 @@ extension Report {
     @NSManaged var rptTitle: String?
     @NSManaged var rptDate: NSDate?
     @NSManaged var rptType: NSNumber?
-    @NSManaged var rptDescription: String?
+    @NSManaged var rptDescription: String
     @NSManaged var rptLatitude: Double
     @NSManaged var rptLongitude: Double
     @NSManaged var rptPhotoId: NSNumber?
